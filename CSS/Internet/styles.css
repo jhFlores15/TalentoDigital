@@ -1,0 +1,252 @@
+#main{
+    width: 970px;
+    background-color: white;
+    min-height: 300px;
+}
+
+#headerUno{
+    margin-bottom: -25px;
+}
+
+#headerUno img{
+    width: 150px;
+    display: inline-block;
+}
+
+#headerUno div{
+    font-size: 50px;
+    display: inline-block;
+    margin-bottom: 20px;
+    vertical-align: 40px;
+}
+
+#headerUno div span{
+    font-size:20px;
+    color:#2c6ca2;
+    font-size: 50px;
+}
+
+#headerDos{
+    background-color: #306da2;
+    color: white;
+    font-size: 40px;
+    padding-left: 40px;
+}
+
+#body{
+    background-color:#e7e7e7;
+    min-height: 300px;
+}
+
+#left{
+    width: 230px;
+    min-height: 300px;
+    display: inline-block;
+    font-weight: bold;
+    vertical-align:top;
+    padding: 10px;
+}
+
+#right{
+    width: 650px;
+    min-height: 300px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.colorRed{
+    color:red;
+}
+
+.colorBlue{
+    color:#2c6ca2;
+}
+
+.backBlue{
+    background-color: #2c6ca2;
+    width:100%;
+}
+
+.backNaranja{
+    background-color: #eca343;
+    width:100%;
+}
+
+.colorWhite{
+    color:white;
+}
+
+button{
+    margin-bottom:3px;
+    border-radius:5px;
+    padding:5px;
+}
+
+.border{
+    margin-top: 20px;
+    border-top: 1px solid black;
+    height:20px;
+}
+
+.imgBack{
+    height: 350px;
+    background-image: url('img/ad_background.png');
+    padding:10px;
+    align-content: center;
+}
+
+.imgBack p{
+    color:white;
+    text-align:center;
+    font-size:25px;
+}
+
+.imgBack img{
+    width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.backCeleste{
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: #00c3df;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right:40px;
+}
+
+
+#headerRight{
+    min-height: 50px;
+    padding-top: 10px;
+}
+
+#leftTwo{
+    min-height: 50px;
+    display: inline-block;
+    width: 308px;
+}
+
+#rightTwo{
+    min-height: 50px;
+    display: inline-block;
+    width: 337px;
+    vertical-align: top;
+}
+
+.imgR{
+    width: 30px;
+    padding-top: 20px;
+    position: relative;
+    top: -8px;
+}
+
+.colorCeleste{
+    color: #00c3df;
+}
+
+#rightTwo p{
+    
+    padding-left: 60px;
+    margin: 0px;
+}
+
+#rightTwo div{
+    display: inline-block;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.size35{
+    font-size: 30px;
+}
+
+.widthRigth{
+    width: auto;
+    text-align: center;
+}
+
+.position{
+    position: relative;
+    top: 0px;
+    left: 50px;
+}
+
+.imgRigth{
+    width: 50px;
+    padding-top: 20px;
+    position: relative;
+    top: -8px;
+    left: 55px;
+}
+
+#leftTwo p{
+    margin-top: -36px;
+    margin-left: 30px;
+}
+
+#mainHeigth{
+    margin-top: -50px;
+}
+
+.marginP{
+    margin-bottom: -12px;
+}
+
+
+#mainHeigth ul li{
+    margin-bottom: 5px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainHeigth img{
+    width: 350px;
+}
+
+.marginT{
+    margin-top: 5px;
+    
+}
+
+.marginB{
+    margin-bottom: -10px;
+}
+
+#mainHeigth ol li{
+    margin-bottom: 1px;
+}
+
+#footer div img{
+    width: 140px;
+}
+
+#footer div{
+    display:inline-block;
+}
+
+.footerRigth{
+    width: 500px;
+}
+
+.footerP{
+    margin-top: -30px;
+    margin-bottom: -10px;
+}
+
+#footer{
+    border: 3px solid #2c6ca2;
+    border-bottom: 0px;
+}
+

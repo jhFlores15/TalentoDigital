@@ -1,0 +1,70 @@
+/*CSS reset settings here*/
+copy * {
+  margin: 0px;
+  padding: 0px;
+}
+#wrapper {
+  width: 950px;
+  background-color: midnightblue;
+  margin: 0px;
+  padding: 20px;
+}
+#header {
+  min-height: auto;
+  background-color: red;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+#navigation {
+  min-height: 300px;
+  width: 250px;
+  background-color: teal;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: underline;
+  color: rgb(24, 121, 145);
+}
+#main_content {
+  min-height: 400px;
+  width: 600px;
+  background-color: cornflowerblue;
+  display: inline-block;
+  padding-top: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  color: white;
+}
+#footer{
+    margin-top: 20px;
+    min-height: auto;
+    width: 100%;
+    background-color: grey; 
+    display: inline-block;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+}
+h1 {
+  text-align: left;
+  color: white;
+}
+#main_content div ul li span, #footer span ,#navigation {
+  color: cyan;
+  text-decoration: underline;
+}
+#main_content div ul li p span  {
+    color: blue;
+    text-decoration: none;
+  }
+
+h5 {
+  display: inline;
+  color: white;
+}
+p{
+    display: inline;
+}

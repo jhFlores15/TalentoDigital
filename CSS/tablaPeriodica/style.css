@@ -1,0 +1,86 @@
+p{
+    margin-bottom: 0px !important;
+    font-size: 12px;
+}
+
+span{
+    font-size: 10px;
+    display: block;
+}
+.backBlue{
+    background-color: #689bff;
+    
+}
+
+.backYellow{
+    background-color: #e6cb00;
+}
+
+.backRed{
+    background-color: #fd9a98;
+}
+
+.colorRed{
+    color: red;
+}
+.col{
+    margin: 1px;
+    display: block;
+}
+
+.marginBox{
+    margin-left: 10px;
+}
+
+.backGreen{
+    background-color: #1fca21;
+}
+
+.displayNone{
+    display: none;
+}
+
+.colorGrey{
+    color: #eeeeee;
+}
+
+.newCol{
+    width:50px;
+    display: inline-block;
+}
+
+.row>* {
+    width: 50px !important;
+}
+
+.asterisco{
+    margin-left: -41px;
+    position: relative;
+    left: 30px;
+    top: 15px;
+}
+.asteriscos{
+    margin-left: -41px;
+    position: relative;
+    left: 23px;
+    top: 15px;
+}
+
+.customLabel{
+    margin-right: 53px;
+    font-size: 12px;
+    margin-top: 15px !important;
+}
+
+
+.marginTop{
+    margin-top: 20px !important;
+}
+
+.colorBlue{
+    color: #1b13a2;
+}
+
+.container{
+    background-color: #eeeeee;
+}

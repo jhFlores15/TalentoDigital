@@ -1,0 +1,132 @@
+#container {
+  width: 900px;
+  height: auto;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+#header {
+  width: 920px;
+  background-color: #f5f5f5;
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px;
+}
+#container {
+  background-color: #443139;
+}
+#photo {
+  display: inline-block;
+  width: auto;
+}
+
+.photo_me {
+  width: 100%;
+  border: 5px solid white;
+  margin-bottom: 20px;
+}
+.name {
+  font-family: cursive;
+  float: left;
+  font-size: 35px;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.description {
+  font-size: 20px;
+  float: right;
+}
+
+#first {
+  width: 40%;
+  float: left;
+  display: inline;
+}
+#second {
+  width: 56%;
+  float: left;
+  margin-left: 30px;
+}
+.subrayar {
+  text-decoration: underline;
+}
+
+.header_box {
+  background-color: #a5a4ab;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.description_box {
+  background-color: #e7dee7;
+  padding: 10px;
+  height: 190px;
+  justify-content:center;
+}
+
+#box_Uno {
+  text-align: justify;
+  background-color: #e7dee7;
+  width: 33%;
+  float: left;
+  margin: 0px 20px 0px 0px;
+}
+
+#box_Dos {
+  text-align: justify;
+  background-color: #e7dee7;
+  width: 34%;
+}
+
+#box_Tres {
+  text-align: justify;
+  background-color: #e7dee7;
+  width: 33%;
+  float: right;
+  margin-left: 20px;
+}
+.img {
+  width: 287px;
+}
+#main_container {
+  display: flex;
+  width: 100%;
+}
+
+.imgTec {
+  width: 50px;
+}
+
+button{
+    color: white;
+    background: green;
+    border-radius: 5px;
+}
+
+.buttonTec{
+    margin-top:5px;
+    width:100%;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}
+#footer{
+    background-color: #f5f5f5;
+    width: 939px;
+    width: 939px;
+    padding: 1px;
+}
+
+.centerG{
+    text-align: center;
+}
+.centerS{
+    text-decoration: underline;
+    text-align: center;
+}
+.imgFooter{
+    width:20px;
+}
