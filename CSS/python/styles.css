@@ -1,12 +1,7 @@
-#principal{
+#main{
     width: 970px;
     background-color: #225176;
     min-height: 300px;
-}
-
-#div4{
-    background-color: white;
-    padding-top: 10px;
 }
 
 #divSuperior{
@@ -26,7 +21,7 @@
     text-align : center;
 }
 
-.textoBlanco{
+.textBlanco{
     color: white;
 }
 .colorPie{
@@ -34,13 +29,13 @@
     font-size: 11px;
     padding: 10px;
 }
-#searhImput{
+#searchInput{
     height : 35px;
     margin-top: 9px;
     text-align: center;
 }
 
-#imputGo{
+#inputGo{
     margin-right: 15px;
     height: 30px;
     border: 1px solid white;
@@ -67,18 +62,84 @@
     padding: 0px 200px 0 200px;
 }
 
-.imagen-titulo{
+.img{
     width: 350px;
     margin-left: 20px;
     margin-top: 5px;
 }
 
-/* .test{
-    border: 2px solid red;
-    min-height: 100px;
-} */
+#nav{
+    margin-top: 25px;
+    margin-left: 108px;
+	background-color: #3e7aad;
+    display: inline-block;
+	border-radius: 5px;
+    padding: 10px;
+    align-content: center;
+}
 
-.cuadroBlanco{
+#nav nav a{
+    margin-left: 20px;
+    font-size:25px;
+    color: white;
+    text-decoration: none;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+#navUno{
+    display: inline-block;
+    width: 260px;
+    text-align: center;
+    vertical-align: top;
+    color: white;
+    text-decoration: none;
+    list-style-position: inside;
+}
+
+#navUno a{
+    color: white;
+    display: inline-block;
+    width: 260px;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#left{
+    display: inline-block;
+    width: 690px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.txtBlanco{
+    color: white;
+}
+
+span{
+    text-decoration: none;
+}
+
+.underline{
+    text-decoration: underline;
+    display: inline;
+}
+
+#divMedio{
+    background-color: white;
+    padding-top: 10px;
+}
+
+.backWhite{
     display: inline-block;
     width: 370px;
     margin-left: 34px;
@@ -89,81 +150,21 @@
     padding-right: 30px;
 }
 
-#pie li{
-    display:inline-block;
-    color: #82b4E0;
-    margin-left: 50px;
-    font-size: 22px;
-}
-/* estos estilos son del menu */
-
-/* *{margin:0;padding:0;box-sizing:border-box;font-size:0;} */
-nav{
-    padding-left: 100px;
-}
-nav *{margin:0;padding:0;box-sizing:border-box;font-size:0;}        
-nav a{
-    text-decoration:none;
-    color:inherit;
-    font-size:22px;
-    } 
-    nav li{
-    display:inline-block;
-    /* width:10%; */
-    padding:10px 23px;
-    background-color:#3D7BAD;
-    /* border:1px solid #000; */
-    text-align:center;
-    color:#fff;
-    }
-    nav li:hover{
-    background-color:#fff;
-    color:#000;
-    }
-nav ul{
-    display: inline-block;
-    box-shadow: 3px 3px 3px black;
-}
-
-.menuStart{
-    border-radius: 8px 0px 0px 8px;
-}
-.menuEnd{
-    border-radius: 0px 8px 8px 0px;
+.cornflowerblue{
+    color: cornflowerblue
 }
 
 .size14{
     font-size: 14px;
 }
-.cornflowerblue{
-    color: cornflowerblue
-}
-#divContenidoIzquierdo{
+
+#footer{
+    width: 100%;
     display: inline-block;
-    width: 260px;
+    font-size: 22px;
     text-align: center;
-    vertical-align: top;
 }
-#divContenidoIzquierdo a{
-   color: white;
-}
-#divContenidoIzquierdo li{
-    height: 25px;
- }
- #divContenidoIzquierdo li::marker {
-    color: #EAC43F;
-    font-size: 1.5em;
-  }
 
-  #divContenidoIzquierdo ul {
+.inline-block{
     display: inline-block;
-    list-style-position: inside;
-  }
-  
-
-
-#divContenidoDerecho{
-    display: inline-block;
-    width: 690px;
-    vertical-align: top;
 }
