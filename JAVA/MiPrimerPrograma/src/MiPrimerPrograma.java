@@ -8,7 +8,7 @@ public class MiPrimerPrograma {
 	    String nombre = sc.nextLine();
 	    
 	    System.out.println("¿Cual es tu edad?: ");
-	    Integer edad = Integer.parseInt(sc.nextLine());
+	    int edad = Integer.parseInt(sc.nextLine());
 	    
 	    System.out.println("¿Donde vives?: ");
 	    String ciudad = sc.nextLine();   
