@@ -3,17 +3,20 @@ public class FrizzBuzz {
 	public String fizzBuzz(int number) {
 		boolean tres = number%3 == 0;
 		boolean cinco = number%5 == 0;
-				
+		
+		String result;
 		if(tres && cinco) {
-			return "FizzBuzz";
+			result = "FizzBuzz";
 		}
 		else if(tres) {
-			return "Fizz";
+			result = "Fizz";
 		}
 		else if(cinco) {
-			return "Buzz";
+			result = "Buzz";
 		}else {
-			return String.valueOf(number);
+			result = String.valueOf(number);
 		}
+		
+		return result;
 	}
 }
