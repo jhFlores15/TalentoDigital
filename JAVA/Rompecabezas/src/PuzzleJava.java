@@ -80,8 +80,30 @@ public class PuzzleJava {
 		}
 		
 		System.out.println("El valor mas pequeño del array es: "+ list.get(0));
+		System.out.println("El valor mas grande del array es: "+ list.get(list.size() -1));
 		
 		return list;
 		
 	}
+	
+	public String createRandomString(int length){
+		Random rand = new Random();
+		String alphabet = "abcdefghijklmnopqrstuvwxyz";
+		String word = "";
+
+		for (int i = 0; i<length; i++){
+			word += alphabet.charAt(rand.nextInt(alphabet.length()));
+		}
+		return word;
+	}
+	
+	public String[] getArrayStrings(int words, int length){
+		String [] list = new String[words];
+		for (int i = 0; i<words; i++){
+			list[i] =  createRandomString(length);
+		}
+		
+		return list;
+	}
+	
 }
