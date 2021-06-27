@@ -19,7 +19,7 @@ public class Human {
 	}
 	
 	public void attack(Human enemy) {
-		enemy.health = enemy.health - this.strength;
+		enemy.setHealth(enemy.getHealth() - this.getStrength());
 	}
 	
 	/**
