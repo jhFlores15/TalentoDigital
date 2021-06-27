@@ -12,6 +12,8 @@ public class Test {
 		gorilla.eatBananas();
 		gorilla.climb();
 		
+		System.out.println();
+		System.out.println();
 		
 		Bat bat = new Bat("juanito");
 		bat.attackTown();
@@ -19,7 +21,9 @@ public class Test {
 		bat.attackTown();
 		bat.eatHumans();
 		bat.eatHumans();
+		bat.attackTown();
 		bat.fly();
+		bat.attackTown();
 		bat.fly();
 	}
 
