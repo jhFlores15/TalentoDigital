@@ -25,8 +25,5 @@ public class Gorilla extends Mammal{
 	}
 	
 	
-	private void modifyEnergy(int energy){
-		this.energy = this.energy + energy ;
-		this.displayEnergy();
-	}
+	
 }

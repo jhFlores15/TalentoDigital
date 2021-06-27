@@ -1,6 +1,6 @@
 package zoologico;
 
-public class GorilaTest {
+public class Test {
 
 	public static void main(String[] args) {
 		Gorilla gorilla = new Gorilla("pepito");
@@ -12,6 +12,15 @@ public class GorilaTest {
 		gorilla.eatBananas();
 		gorilla.climb();
 		
+		
+		Bat bat = new Bat("juanito");
+		bat.attackTown();
+		bat.attackTown();
+		bat.attackTown();
+		bat.eatHumans();
+		bat.eatHumans();
+		bat.fly();
+		bat.fly();
 	}
 
 }

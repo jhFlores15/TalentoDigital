@@ -8,4 +8,9 @@ public class Mammal {
 		
 		return this.energy;
 	}
+	
+	public void modifyEnergy(int energy){
+		this.energy = this.energy + energy ;
+		this.displayEnergy();
+	}
 }
