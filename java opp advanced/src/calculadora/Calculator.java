@@ -1,58 +1,95 @@
 package calculadora;
 
-public class Calculator implements CalculatorInterface {
+import java.util.ArrayList;
+
+public class Calculator{
+	public final String SUM = "+";
+	public final String SUBTRACCION = "-";
+	public final String MULTIPLY = "*";
+	public final String DIVIDE = "/";
+	public final String EQUAL = "=";	
 	
-	public double operandOne;
-	public double operandTwo;
-	public char operation;
+	ArrayList<Double> operands = new ArrayList<Double>();
+	ArrayList<String> operations = new ArrayList<String>();
+	
 	private double result;
-	
-	public Calculator(double operandOne, char operation,double operandTwo) {
-		this.operandOne = operandOne;
-		this.operandTwo = operandTwo;
-		this.operation = operation;
-	}
-	
-	public double getOperandOne() {
-		return operandOne;
-	}
-	
-	public void setOperandOne(double operandOne) {
-		this.operandOne = operandOne;
-	}
-	public double getOperandTwo() {
-		return operandTwo;
-	}
-	public void setOperandTwo(double operandTwo) {
-		this.operandTwo = operandTwo;
-	}
-	
+		
 	public double getResult() {
 		return this.result;
 	}
 	
-	public void performOperation() throws Exception {	
+	public void performOperation(double operand) throws Exception {
+		operands.add(operand);
+	}
+	
+	public void performOperation(String operation) throws Exception {
+		if(operation != "=") {
+			operations.add(operation);
+		}
+		else {
+			this.equal();
+		}
 		
-		switch(this.operation) {
+	}
+	
+	public void equal() throws Exception {
+		for (int i = 0; i < operands.size(); i++ ){
+			
+		}
+		
+		
+		for (int i = 0, x = 0; i < operands.size(); i++,x++ ){
+			System.out.println(this.result);
+			if(i == 0) {
+				this.calculate(operands.get(i), operands.get(i+1), operations.get(x) );
+				i++;
+			}else {
+				this.calculate(this.result, operands.get(i), operations.get(x) );
+			}
+		}
+	}
+
+	public void calculate(double operandOne, double OperandTwo, String operation) throws Exception {	
+		
+		switch(operation) {
 			case SUM:
-				this.result = this.sum();
+				this.result = this.sum(operandOne,OperandTwo);
 				break;
 			case SUBTRACCION:
-				this.result = this.subtraction();
+				this.result = this.subtraction(operandOne,OperandTwo);
+				break;
+			case MULTIPLY:
+				this.result = this.multiply(operandOne,OperandTwo);
+				break;
+			case DIVIDE:
+				this.result = this.divide(operandOne,OperandTwo);
+				break;
+			case EQUAL:
+				this.equal();
 				break;
 			default:
 				throw new Exception("operacion no manejada");
 		}
 	}
-
-	@Override
-	public double sum() {
-		return this.operandOne + this.operandTwo;
+	
+	
+	public double sum(double operandOne, double operandTwo) {
+		return operandOne + operandTwo;
 	}
 
-	@Override
-	public double subtraction() {
-		return this.operandOne - this.operandTwo;
+	public double subtraction(double operandOne, double operandTwo) {
+		return operandOne - operandTwo;
 	}
+	
+	public double multiply(double operandOne, double operandTwo) {
+		return operandOne * operandTwo;
+	}
+	
+	public double divide(double operandOne, double operandTwo) {
+		return operandOne / operandTwo;
+	}
+	
+	
+	
 	
 }
