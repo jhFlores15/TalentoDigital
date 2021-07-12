@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8">
+<menu>
+    <item category="almuerzo">
+        <name>Ensalada con Pollo</name>
+        <description>Una ensalada con pollo.</description>
+        <price>$10.99</price>
+    </item>
+    <item category="desayuno">
+        <name>Sánduche de Pollo</name>
+        <description>Un sánduche de pollo. </description>
+        <price>$12.99</price>
+    </item>
+    <item category="cena">
+        <name>Sánduche de Pastrami</name>
+        <description>Un sánduche hecho con pastrami.</description>
+        <price>$13.99</price>
+    </item>  
+</menu>
