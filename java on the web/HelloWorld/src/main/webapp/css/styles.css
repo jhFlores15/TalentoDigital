@@ -1,0 +1,15 @@
+.boxDarkorchid{
+    background-color: darkorchid;
+}
+
+.boxBlue{
+    background-color: blue;
+}
+
+.cuadrado {
+    width:25vh;
+    max-width:100px;
+    height:25vh;
+    max-height:100px;
+    position:relative;
+}
