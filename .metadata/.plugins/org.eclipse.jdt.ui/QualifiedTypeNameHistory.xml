@@ -3,4 +3,7 @@
     <fullyQualifiedTypeName name="pokemon.Pokedex"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="com.johfloresm.web.models.Dog"/>
+    <fullyQualifiedTypeName name="com.johfloresm.web.models.Cat"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 </qualifiedTypeNameHistroy>
