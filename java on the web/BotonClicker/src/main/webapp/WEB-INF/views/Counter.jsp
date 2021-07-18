@@ -14,8 +14,11 @@
 <body>
 	<div class="row m-2 w-25 ">
 		<div class="col text-center">
+		<form  method="post">
 			<button class="btn btn-primary w-25 mb-3" onclick="location.reload();" >Click Me!</button>			
 			<h3>You have clicked this button  <c:out value="${countClicker}"/> times</h3>
+		</form>
+			
 		</div>
 		
 	</div>

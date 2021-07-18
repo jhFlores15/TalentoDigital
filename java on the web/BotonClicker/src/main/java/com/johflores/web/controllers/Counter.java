@@ -33,13 +33,9 @@ public class Counter extends HttpServlet {
 		 HttpSession session = request.getSession();
 		 int contador = 0;
 		 
-		 if(session.getAttribute("countClicker") == null) {
-			 session.setAttribute("countClicker", "0");
-		 }
-		 else {
+		 if(session.getAttribute("countClicker") != null) {
 			 String countClicker = (String) session.getAttribute("countClicker");
 			 contador = Integer.parseInt(countClicker);
-			 session.setAttribute("countClicker", Integer.toString(++contador));
 		 }
 		
         
@@ -52,7 +48,17 @@ public class Counter extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		 HttpSession session = request.getSession();
+		 int contador = 1;
+		 if(session.getAttribute("countClicker") == null) {
+			 session.setAttribute("countClicker", "1");
+		 }
+		 else {
+			 String countClicker = (String) session.getAttribute("countClicker");
+			 contador = Integer.parseInt(countClicker);
+			 session.setAttribute("countClicker", Integer.toString(++contador));
+		 }
+		 
 		doGet(request, response);
 	}
 
