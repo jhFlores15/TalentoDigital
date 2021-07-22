@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="HelloWorld" path="/HelloWorld" reloadable="true" source="org.eclipse.jst.jee.server:HelloWorld"/><Context docBase="Mascotas" path="/Mascotas" reloadable="true" source="org.eclipse.jst.jee.server:Mascotas"/><Context docBase="BotonClicker" path="/BotonClicker" reloadable="true" source="org.eclipse.jst.jee.server:BotonClicker"/><Context docBase="RandomWords" path="/RandomWords" reloadable="true" source="org.eclipse.jst.jee.server:RandomWords"/><Context docBase="GreatNumber" path="/GreatNumber" reloadable="true" source="org.eclipse.jst.jee.server:GreatNumber"/></Host>
+      <Context docBase="HelloWorld" path="/HelloWorld" reloadable="true" source="org.eclipse.jst.jee.server:HelloWorld"/><Context docBase="Mascotas" path="/Mascotas" reloadable="true" source="org.eclipse.jst.jee.server:Mascotas"/><Context docBase="BotonClicker" path="/BotonClicker" reloadable="true" source="org.eclipse.jst.jee.server:BotonClicker"/><Context docBase="RandomWords" path="/RandomWords" reloadable="true" source="org.eclipse.jst.jee.server:RandomWords"/><Context docBase="GreatNumber" path="/GreatNumber" reloadable="true" source="org.eclipse.jst.jee.server:GreatNumber"/><Context docBase="Equipos" path="/Equipos" reloadable="true" source="org.eclipse.jst.jee.server:Equipos"/></Host>
     </Engine>
   </Service>
 </Server>
