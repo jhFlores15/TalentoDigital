@@ -2601,3 +2601,26 @@ Binding(CTRL+SHIFT+C,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-21 21:43:23.806
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rsEDcnbm
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-21 21:43:23.832
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.rsEDcnbm
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-21 21:43:23.834
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-21 21:43:23.835
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rsEDcnbm => OK
+
+!ENTRY org.eclipse.ui.ide 4 4 2021-07-21 21:43:28.260
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2021-07-21 21:43:28.263
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-07-21 21:43:28.263
+!MESSAGE The project description file (.project) for 'Servers' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-07-21 21:43:31.139
+!MESSAGE The workspace will exit with unsaved changes in this session.
