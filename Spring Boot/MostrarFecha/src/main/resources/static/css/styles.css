@@ -1,0 +1,21 @@
+.u-color__dodgerblue{
+    color: dodgerblue;
+}
+
+.u-color__lightseagreen{
+    color: lightseagreen;
+}
+
+.u-font__lucida{
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.u-text-center{
+    text-align: center;
+}
+.u-mt200{
+    margin-top: 200px;
+}
+.u-font-size__xxxlarge{
+    font-size: xxx-large;
+}
