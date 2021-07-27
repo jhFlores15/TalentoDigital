@@ -3,7 +3,7 @@
   Created by IntelliJ IDEA.
   User: johfl
   Date: 26-07-2021
-  Time: 19:59
+  Time: 19:59Counter
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -16,6 +16,10 @@
     <div class="row text-center">
         <h3>You have visited <a href="/">Welcome</a>  <c:out value="${counter}"/> times.</h3>
         <a href="/">Test another visit?</a>
+        <a href="/double">Test another visit Double Counter?</a>
+        <form action="/reset" method="post">
+            <button class="btn btn-primary">Reset Counter</button>
+        </form>
     </div>
 </body>
 </html>
