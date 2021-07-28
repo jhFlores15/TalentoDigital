@@ -16,31 +16,40 @@ public class Ninja {
         return (int) ((Math.random() * (maxGold - maxGold)) + minGold);
     }
 
-    public void addGold(int maxGold, int minGold) {
-        this.gold = this.gold + this.getRandomNumber(maxGold, minGold);
+    public int addGold(int maxGold, int minGold) {
+        int amount = this.getRandomNumber(maxGold, minGold);
+        this.gold = this.gold + amount;
+
+        return amount;
     }
 
-    public void subtractGold(int maxGold, int minGold) {
-        this.gold = this.gold - this.getRandomNumber(maxGold, minGold);
+    public int subtractGold(int maxGold, int minGold) {
+        int amount = this.getRandomNumber(maxGold, minGold) * -1;
+        this.gold = this.gold - amount;
+
+        return amount;
     }
 
-    public void randomAddOrSub(int maxGold, int minGold) {
+    public Integer randomAddOrSub(int maxGold, int minGold) {
         Random rand       = new Random();
         String operations = "+-";
         char   operation  = operations.charAt(rand.nextInt(operations.length()));
-
+        Integer amount = null;
         switch (operation) {
             case '+':
-                this.addGold(maxGold, minGold);
+                amount = this.addGold(maxGold, minGold);
                 break;
             case '-':
-                this.subtractGold(maxGold, minGold);
+                amount = this.subtractGold(maxGold, minGold);
                 break;
         }
+
+        return amount;
     }
 
-    public void addActivities(int gold, Date date, String place){
-        Activity activity = new Activity(gold,date, place);
+    public void addActivity(int amount, String place){
+        Date date = new Date();
+        Activity activity = new Activity(amount,date, place);
         activities.add(activity);
     }
 

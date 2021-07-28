@@ -22,7 +22,8 @@ public class GameController {
     @RequestMapping(value = "/farm",method = RequestMethod.POST)
     public String farm(HttpSession session){
         Ninja ninja = session.getAttribute("ninja") == null ? new Ninja() : (Ninja) session.getAttribute("ninja");
-        ninja.addGold(20,10);
+        Integer amount = ninja.addGold(20,10);
+        ninja.addActivity(amount,"farm");
         session.setAttribute("ninja",ninja);
 
         return "redirect:/";
@@ -31,7 +32,8 @@ public class GameController {
     @RequestMapping(value = "/cave",method = RequestMethod.POST)
     public String cave(HttpSession session){
         Ninja ninja = session.getAttribute("ninja") == null ? new Ninja() : (Ninja) session.getAttribute("ninja");
-        ninja.addGold(10,5);
+        Integer amount = ninja.addGold(10,5);
+        ninja.addActivity(amount,"cave");
         session.setAttribute("ninja",ninja);
 
         return "redirect:/";
@@ -40,7 +42,8 @@ public class GameController {
     @RequestMapping(value = "/house",method = RequestMethod.POST)
     public String house(HttpSession session){
         Ninja ninja = session.getAttribute("ninja") == null ? new Ninja() : (Ninja) session.getAttribute("ninja");
-        ninja.addGold(5,2);
+        Integer amount = ninja.addGold(5,2);
+        ninja.addActivity(amount,"house");
         session.setAttribute("ninja",ninja);
 
         return "redirect:/";
@@ -49,7 +52,8 @@ public class GameController {
     @RequestMapping(value = "/casino",method = RequestMethod.POST)
     public String casino(HttpSession session){
         Ninja ninja = session.getAttribute("ninja") == null ? new Ninja() : (Ninja) session.getAttribute("ninja");
-        ninja.randomAddOrSub(50,0);
+        Integer amount = ninja.randomAddOrSub(50,0);
+        ninja.addActivity(amount,"casino");
         session.setAttribute("ninja",ninja);
 
         return "redirect:/";
@@ -58,7 +62,16 @@ public class GameController {
     @RequestMapping(value = "/spa",method = RequestMethod.POST)
     public String spa(HttpSession session){
         Ninja ninja = session.getAttribute("ninja") == null ? new Ninja() : (Ninja) session.getAttribute("ninja");
-        ninja.subtractGold(20,5);
+        Integer amount = ninja.subtractGold(20,5);
+        ninja.addActivity(amount,"spa");
+        session.setAttribute("ninja",ninja);
+
+        return "redirect:/";
+    }
+
+    @RequestMapping(value = "/reset",method = RequestMethod.POST)
+    public String reset(HttpSession session){
+        Ninja ninja = new Ninja();
         session.setAttribute("ninja",ninja);
 
         return "redirect:/";
