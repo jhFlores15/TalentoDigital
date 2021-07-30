@@ -22,4 +22,8 @@ public class Activity {
         return "You entered a " + place + " and lost " + amount * -1 + " gold... Ouch (" + date + ")";
     }
 
+    public int getAmount(){
+        return this.amount;
+    }
+
 }

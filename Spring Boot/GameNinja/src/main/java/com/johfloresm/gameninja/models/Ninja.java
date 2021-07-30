@@ -13,7 +13,8 @@ public class Ninja {
     }
 
     public int getRandomNumber(int maxGold, int minGold) {
-        return (int) ((Math.random() * (maxGold - maxGold)) + minGold);
+        Random r = new Random();
+        return r.nextInt(maxGold) + minGold;
     }
 
     public int addGold(int maxGold, int minGold) {
@@ -25,7 +26,7 @@ public class Ninja {
 
     public int subtractGold(int maxGold, int minGold) {
         int amount = this.getRandomNumber(maxGold, minGold) * -1;
-        this.gold = this.gold - amount;
+        this.gold = this.gold + amount;
 
         return amount;
     }
@@ -57,5 +58,7 @@ public class Ninja {
         return this.activities;
     }
 
-
+    public int getGold(){
+        return gold;
+    }
 }

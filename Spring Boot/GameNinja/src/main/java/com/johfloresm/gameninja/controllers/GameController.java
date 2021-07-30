@@ -9,14 +9,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpSession;
 
 @Controller
+@RequestMapping("/")
 public class GameController {
 
-    @RequestMapping("")
+    @RequestMapping("/")
     public String index(Model model, HttpSession session){
         Ninja ninja = session.getAttribute("ninja") == null ? new Ninja() : (Ninja) session.getAttribute("ninja");
         model.addAttribute("ninja",ninja);
 
-        return "webapp/WEB-INF/index.jsp";
+        return "index.jsp";
     }
 
     @RequestMapping(value = "/farm",method = RequestMethod.POST)
