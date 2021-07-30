@@ -16,11 +16,14 @@
     <title>Game Ninja</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container p-3">
         <div class="row">
             <div class="row">
                 <div class="col-2"> <h3> Your Gold</h3></div>
-                <div class="col"><input type="text" class="form-control w-25" readonly value="<c:out value='${ninja.getGold()}'/>"></div>
+                <div class="col-3"><input type="text" class="form-control w-25" readonly value="<c:out value='${ninja.getGold()}'/>"></div>
+                <div class="col text-end">
+                    <form action="/reset" method="post"><button class="btn btn-primary">Reset</button></form>
+                </div>
             </div>
 
         </div>
