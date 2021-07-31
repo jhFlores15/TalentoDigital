@@ -5,26 +5,26 @@ import java.util.Date;
 
 public class Activity {
 
-    int    amount;
+    int    ammount;
     Date   date;
     String place;
 
-    public Activity(int amount, Date date, String place){
-        this.amount = amount;
+    public Activity(int ammount, Date date, String place){
+        this.ammount = ammount;
         this.date   = date;
         this.place  = place;
     }
 
     public String getDetails(){
-        if(this.amount > 0){
-            return "You entered a " + place + " and earned " + amount + " gold (" + this.formatDate() + ")";
+        if(this.ammount > 0){
+            return "You entered a " + place + " and earned " + ammount + " gold (" + this.formatDate() + ")";
         }
 
-        return "You entered a " + place + " and lost " + amount * -1 + " gold... Ouch (" + this.formatDate() + ")";
+        return "You entered a " + place + " and lost " + ammount * -1 + " gold... Ouch (" + this.formatDate() + ")";
     }
 
     public int getAmount(){
-        return this.amount;
+        return this.ammount;
     }
 
     private String formatDate(){
