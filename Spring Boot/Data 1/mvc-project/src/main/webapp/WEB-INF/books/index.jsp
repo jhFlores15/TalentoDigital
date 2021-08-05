@@ -32,7 +32,14 @@
                 <td><c:out value="${book.description}"/></td>
                 <td><c:out value="${book.language}"/></td>
                 <td><c:out value="${book.numberOfPages}"/></td>
-                <td><a class="btn btn-primary" href="books/<c:out value="${book.id}"/>"> Show </a></td>
+                <td>
+                    <a class="btn btn-primary" href="books/<c:out value="${book.id}"/>"> Show </a>
+                    <a class="btn btn-primary" href="/books/${book.id}/edit">Edit</a>
+                    <form action="/books/${book.id}" method="post">
+                        <input type="hidden" name="_method" value="delete">
+                        <input class="btn btn-primary" type="submit" value="Delete">
+                    </form>
+                </td>
             </tr>
         </c:forEach>
         </tbody>

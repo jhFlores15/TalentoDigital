@@ -30,4 +30,15 @@ public class BookService{
     public Long deleteBook(Long id){
         return bookrepository.deleteBookById(id);
     }
+
+    public void updateBook(Book book){
+        Book b = this.findBook(book.getId());
+
+        b.setLanguage(book.getLanguage());
+        b.setNumberOfPages(book.getNumberOfPages());
+        b.setTitle(book.getTitle());
+        b.setDescription(book.getDescription());
+
+        bookrepository.save(b);
+    }
 }
