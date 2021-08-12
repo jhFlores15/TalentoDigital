@@ -19,8 +19,13 @@ public class LicenseService{
     }
 
     public License createLicense(License b) {
-        b.setNumber(License.generateNumber());
+        License last = this.getLastLicenseCreated();
+        b.setNumber(last.generateNumber());
         return licenseRepository.save(b);
+    }
+
+    public License getLastLicenseCreated(  ){
+        return  licenseRepository.findFirstByOrderByIdDesc();
     }
 
     public License getLicenseById(Long id){

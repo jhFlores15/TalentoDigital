@@ -26,7 +26,7 @@
           <form:label cssClass="form-label" path="person">person</form:label>
           <form:errors path="person"/>
 
-          <form:select  path="person">
+          <form:select cssClass="form-control" path="person">
             <%--@elvariable id="person" type="com.johfloresm.licenciamanejo.models.Person"--%>
             <c:forEach items="${persons}" var="person">
               <form:option value="${person.id}">${person.firstName}</form:option>

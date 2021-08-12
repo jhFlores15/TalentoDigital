@@ -35,6 +35,6 @@ public class LicenseController{
         }
         licenseService.createLicense(license);
 
-        return "redirect:/licenses/new";
+        return "redirect:/persons";
     }
 }

@@ -26,8 +26,6 @@ public class License{
     @JoinColumn(name="person_id")
     private Person person;
 
-    static Long lastNumber = 0L;
-
 
     public License() {
 
@@ -89,14 +87,6 @@ public class License{
         this.person = person;
     }
 
-    public static Long getLastNumber(){
-        return lastNumber;
-    }
-
-    public static void setLastNumber(Long lastNumber){
-        License.lastNumber = lastNumber;
-    }
-
     @PrePersist
     protected void onCreate(){
         this.createdAt = new Date();
@@ -107,8 +97,9 @@ public class License{
         this.createdAt = new Date();
     }
 
-    public static String generateNumber (){
-        String number = (++lastNumber ).toString();
+    public String generateNumber (){
+        Long licenseNumber = Long.valueOf( this.getNumber());
+        String number = (++licenseNumber ).toString();
         return Strings.repeat("0", 5 - number.length()) + number;
     }
 }

@@ -10,6 +10,8 @@ import java.util.List;
 @Repository
 public interface LicenseRepository extends CrudRepository<License, Long>{
 
+    License findFirstByOrderByIdDesc();
+
     List<License> findAll();
 
     @Transactional

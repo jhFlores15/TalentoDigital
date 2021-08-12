@@ -19,6 +19,12 @@ public class PersonController{
     @Autowired
     private PersonService personService;
 
+    @RequestMapping("persons")
+    public String index(Model model){
+        model.addAttribute("persons", personService.getPersons());
+        return "persons/index.jsp";
+    }
+
     @RequestMapping("persons/new")
     public String create(@ModelAttribute("person") Person person){
         return "persons/create.jsp";
