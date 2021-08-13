@@ -1,32 +1,25 @@
-package com.johfloresm.listaestudiantes.models;
+package com.johfloresm.dojosninjas.models;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "students")
-public class Student{
+@Table(name="ninjas")
+public class Ninja{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String firstName;
     private String lastName;
-    private int    age;
+    private int age;
     @Column(updatable=false)
-    private Date   createdAt;
-    private Date   updatedAt;
-    @OneToOne(mappedBy="student", cascade=CascadeType.ALL, fetch=FetchType.LAZY, optional=false)
-    private Contact contact;
+    private Date createdAt;
+    private Date updatedAt;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="dojo_id")
+    private Dojo dojo;
 
-    public Student(){}
-
-    public Student(String firstName, String lastName, int age, Contact contact){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.contact = contact;
-    }
+    public Ninja(){}
 
     public Long getId(){
         return id;
@@ -76,12 +69,12 @@ public class Student{
         this.updatedAt = updatedAt;
     }
 
-    public Contact getContact(){
-        return contact;
+    public Dojo getDojo(){
+        return dojo;
     }
 
-    public void setContact(Contact contact){
-        this.contact = contact;
+    public void setDojo(Dojo dojo){
+        this.dojo = dojo;
     }
 
     @PrePersist
