@@ -1,5 +1,7 @@
 package com.johfloresm.listaestudiantes.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -10,7 +12,6 @@ public class Student{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String          firstName;
     private String          lastName;
     private int             age;
@@ -21,6 +22,7 @@ public class Student{
     private Contact         contact;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="dormitory_id")
+    @JsonIgnore
     private Dormitory dormitory;
 
     public Student(){}

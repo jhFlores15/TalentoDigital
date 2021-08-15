@@ -1,5 +1,7 @@
 package com.johfloresm.listaestudiantes.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.*;
 import java.util.Date;

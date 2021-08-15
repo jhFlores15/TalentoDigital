@@ -1,5 +1,7 @@
 package com.johfloresm.listaestudiantes.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -17,6 +19,7 @@ public class Contact{
     private Date updatedAt;
     @OneToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="student_id")
+    @JsonIgnore
     private Student student;
 
     public Contact(){}
