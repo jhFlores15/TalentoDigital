@@ -24,6 +24,14 @@ public class Student{
     @JoinColumn(name="dormitory_id")
     @JsonIgnore
     private Dormitory dormitory;
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "students_classes",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "class_id")
+    )
+    @JsonIgnore
+    private List<Class> classes;
 
     public Student(){}
 
@@ -97,6 +105,25 @@ public class Student{
 
     public void setDormitory(Dormitory dormitory){
         this.dormitory = dormitory;
+    }
+
+    public List<Class> getClasses(){
+        return classes;
+    }
+
+    public void setClasses(List<Class> classes){
+        this.classes = classes;
+    }
+
+    public void setClass(Class c){
+        if(!this.classes.contains(c)){
+            this.classes.add(c);
+        }
+    }
+
+    public void removeClass(Class c){
+        this.classes.remove(c);
+        //c.getStudents().remove(this);
     }
 
     @PrePersist

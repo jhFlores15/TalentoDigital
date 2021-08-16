@@ -8,11 +8,10 @@ import com.johfloresm.listaestudiantes.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -23,6 +22,21 @@ public class DormitoryController{
     private DormitoryService dormitoryService;
     @Autowired
     private StudentService studentService;
+
+    @RequestMapping("new")
+    public String create(@ModelAttribute("dormitory") Dormitory dormitory){
+        return "dorms/create.jsp";
+    }
+
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    public String store(@Valid @ModelAttribute("dormitory") Dormitory dormitory, BindingResult result){
+        if(result.hasErrors()){
+            return "dorms/create.jsp";
+        }
+
+        dormitoryService.createDormitory(dormitory);
+        return "redirect:/dorms/" + dormitory.getId();
+    }
 
     @RequestMapping("{id}")
     public String show(@PathVariable("id") Long id, Model model){

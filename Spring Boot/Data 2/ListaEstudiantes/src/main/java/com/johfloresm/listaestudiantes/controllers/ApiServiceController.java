@@ -1,11 +1,14 @@
 package com.johfloresm.listaestudiantes.controllers;
 
+import com.johfloresm.listaestudiantes.models.Class;
 import com.johfloresm.listaestudiantes.models.Contact;
 import com.johfloresm.listaestudiantes.models.Dormitory;
 import com.johfloresm.listaestudiantes.models.Student;
+import com.johfloresm.listaestudiantes.services.ClassService;
 import com.johfloresm.listaestudiantes.services.ContactService;
 import com.johfloresm.listaestudiantes.services.DormitoryService;
 import com.johfloresm.listaestudiantes.services.StudentService;
+import org.hibernate.service.spi.InjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,12 +21,17 @@ import java.util.List;
 @RequestMapping("api")
 public class ApiServiceController{
 
-    @Autowired
     private StudentService studentService;
-    @Autowired
     private ContactService   contactService;
-    @Autowired
     private DormitoryService dormitoryService;
+    private ClassService classService;
+
+    public ApiServiceController(StudentService studentService, ContactService contactService, DormitoryService dormitoryService, ClassService classService){
+        this.studentService = studentService;
+        this.contactService = contactService;
+        this.dormitoryService = dormitoryService;
+        this.classService = classService;
+    }
 
     @RequestMapping("students")
     public List<Student> getStudents(){
@@ -92,6 +100,26 @@ public class ApiServiceController{
         studentService.createStudent(student);
 
         return student;
+    }
+
+    @RequestMapping("classes/create")
+    public Class createClass(@RequestParam("name") String name){
+        Class c = new Class(name);
+        return classService.createClass(c);
+    }
+
+    @RequestMapping("students/{id}/add")
+    public Class addStudentToClass(@PathVariable(value = "id") Long studentId, @RequestParam(value = "class") Long classId){
+        Student student = studentService.getStudentById(studentId);
+        Class  c = classService.getClassById(classId);
+        student.setClass(c);
+        studentService.createStudent(student);
+        return c;
+    }
+
+    @RequestMapping("classes/{id}")
+    public Class showClass(@PathVariable("id") Long id){
+        return classService.getClassById(id);
     }
 
 }
