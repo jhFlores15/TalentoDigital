@@ -2,6 +2,7 @@ package com.johfloresm.authentication.controllers;
 
 import com.johfloresm.authentication.models.User;
 import com.johfloresm.authentication.services.UserService;
+import com.johfloresm.authentication.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,8 +17,12 @@ import javax.validation.Valid;
 
 @Controller
 public class UsersController{
-    @Autowired
-    private UserService userService;
+    private final UserService   userService;
+    private final UserValidator userValidator;
+    public UsersController(UserService userService, UserValidator userValidator) {
+        this.userService = userService;
+        this.userValidator = userValidator;
+    }
 
     @RequestMapping("/registration")
     public String registerForm(@ModelAttribute("user") User user) {
@@ -29,11 +34,12 @@ public class UsersController{
     }
 
     @RequestMapping(value="/registration", method= RequestMethod.POST)
-    public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session,Model model) {
+    public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
         //si el resultado tiene errores, retornar a la página de registro (no se preocupe por las validaciones por ahora)
         //si no, guarde el usuario en la base de datos, guarde el id del usuario en el objeto Session y redirija a /home
+        userValidator.validate(user, result);
         if(result.hasErrors()){
-            return registerForm(user);
+            return "registrationPage.jsp";
         }
         user = userService.registerUser(user);
         session.setAttribute("idUsuario", user.getId());
