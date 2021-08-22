@@ -1,25 +1,31 @@
-package com.johfloresm.authentication.services;
+package com.johfloresm.eventos.services;
 
-import com.johfloresm.authentication.models.User;
-import com.johfloresm.authentication.repositories.UserRepository;
+import com.johfloresm.eventos.models.User;
+import com.johfloresm.eventos.repositories.UserRepository;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
-public class UserService {
+public class UserService{
     private final UserRepository userRepository;
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
+    // registrar el usuario y hacer Hash a su password
     public User registerUser(User user) {
         String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
         user.setPassword(hashed);
         return userRepository.save(user);
     }
+
+    public User saveUser(User user) {
+        return userRepository.save(user);
+    }
+
 
     public User findByEmail(String email) {
         return userRepository.findByEmail(email);

@@ -3180,3 +3180,172 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.eclipse.ui 2 2 2021-08-21 17:29:28.695
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2021-08-22 11:25:40.825 -----------------------------------------------
+eclipse.buildId=4.10.0.202103111225
+java.version=15.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_CL
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-08-22 11:25:56.728
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-08-22 11:25:56.728
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58932d08,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@45648e75,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:15.590
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:15.591
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@56d33e36[org.springframework.tooling.boot.ls:1.25.0.202103111026(id=555)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:15.612
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:15.997
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-08-22 11:26:18.754
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\johfl'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:35.360
+!MESSAGE Boot LS startup time from start to initialized: 19729ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.354
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.NDyCQuZZisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.448
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.461
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.463
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.463
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.466
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.NDyCQuZZ => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.484
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.489
+!MESSAGE buffering callback sts4.classpath.NDyCQuZZ authentication false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.490
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.492
+!MESSAGE classpath=32 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.493
+!MESSAGE buffering callback sts4.classpath.NDyCQuZZ BotonClicker false 32
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.494
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.496
+!MESSAGE classpath=32 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.497
+!MESSAGE buffering callback sts4.classpath.NDyCQuZZ Equipos false 32
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.498
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.499
+!MESSAGE classpath=32 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.500
+!MESSAGE buffering callback sts4.classpath.NDyCQuZZ GreatNumber false 32
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.502
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.503
+!MESSAGE classpath=32 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.504
+!MESSAGE buffering callback sts4.classpath.NDyCQuZZ HelloWorld false 32
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.506
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.507
+!MESSAGE classpath=32 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.508
+!MESSAGE buffering callback sts4.classpath.NDyCQuZZ Mascotas false 32
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.510
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.511
+!MESSAGE classpath=32 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.513
+!MESSAGE buffering callback sts4.classpath.NDyCQuZZ RandomWords false 32
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.514
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.515
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.516
+!MESSAGE buffering callback sts4.classpath.NDyCQuZZ java opp advanced false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:39.517
+!MESSAGE executing callback sts4.classpath.NDyCQuZZ 8 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:26:41.533
+!MESSAGE executing callback sts4.classpath.NDyCQuZZ FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2021-08-22 11:26:41.557
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1950)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2085)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:27:49.079
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NDyCQuZZ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:27:49.080
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.NDyCQuZZ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:27:49.082
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-22 11:27:49.083
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NDyCQuZZ => OK
+
+!ENTRY org.eclipse.ui 2 2 2021-08-22 11:27:51.452
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)

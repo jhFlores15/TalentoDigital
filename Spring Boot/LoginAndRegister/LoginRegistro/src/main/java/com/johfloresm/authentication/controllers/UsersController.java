@@ -3,7 +3,6 @@ package com.johfloresm.authentication.controllers;
 import com.johfloresm.authentication.models.User;
 import com.johfloresm.authentication.services.UserService;
 import com.johfloresm.authentication.validator.UserValidator;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -24,22 +23,16 @@ public class UsersController{
         this.userValidator = userValidator;
     }
 
-    @RequestMapping("/registration")
-    public String registerForm(@ModelAttribute("user") User user) {
-        return "registrationPage.jsp";
-    }
-    @RequestMapping("/login")
-    public String login() {
-        return "loginPage.jsp";
+    @RequestMapping("/")
+    public String index(@ModelAttribute("user") User user) {
+        return "index.jsp";
     }
 
     @RequestMapping(value="/registration", method= RequestMethod.POST)
     public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
-        //si el resultado tiene errores, retornar a la página de registro (no se preocupe por las validaciones por ahora)
-        //si no, guarde el usuario en la base de datos, guarde el id del usuario en el objeto Session y redirija a /home
         userValidator.validate(user, result);
         if(result.hasErrors()){
-            return "registrationPage.jsp";
+            return "index.jsp";
         }
         user = userService.registerUser(user);
         session.setAttribute("idUsuario", user.getId());
@@ -48,33 +41,28 @@ public class UsersController{
 
     @RequestMapping(value="/login", method=RequestMethod.POST)
     public String loginUser(@RequestParam("email") String email, @RequestParam("password") String password, Model model, HttpSession session) {
-        //Si el usuario está autenticado, guarde su id de usuario en el objeto Session
-        //sino agregue un mensaje de error y retorne a la página de inicio de sesión.
         if(userService.authenticateUser(email,password)){
             User user = userService.findByEmail(email);
             session.setAttribute("idUsuario", user.getId());
             return "redirect:/home";
         }
-        return "loginPage.jsp";
+        return "index.jsp";
     }
 
     @RequestMapping("/home")
     public String home(HttpSession session, Model model) {
-        //Obtener el usuario desde session, guardarlo en el modelo y retornar a la página principal
         if(session.getAttribute("idUsuario") != null){
             User usuario = userService.findUserById(Long.parseLong(session.getAttribute("idUsuario").toString()));
             model.addAttribute("user",usuario);
-            return "homePage.jsp";
+            return "home.jsp";
         }
-        return "redirect:/login";
+        return "redirect:/";
     }
 
     @RequestMapping("/logout")
     public String logout(HttpSession session) {
-        // invalidar la sesión
-        // redireccionar a la página de inicio de sesión.
         session.invalidate();
-        return "redirect:/login";
+        return "redirect:/";
     }
 
 }

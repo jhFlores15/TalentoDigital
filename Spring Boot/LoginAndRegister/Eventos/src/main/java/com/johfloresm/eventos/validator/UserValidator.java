@@ -1,6 +1,6 @@
-package com.johfloresm.authentication.validator;
+package com.johfloresm.eventos.validator;
 
-import com.johfloresm.authentication.models.User;
+import com.johfloresm.eventos.models.User;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
@@ -8,6 +8,7 @@ import org.springframework.validation.Validator;
 
 @Component
 public class UserValidator implements Validator{
+
 
     @Override
     public boolean supports(Class<?> clazz) {
