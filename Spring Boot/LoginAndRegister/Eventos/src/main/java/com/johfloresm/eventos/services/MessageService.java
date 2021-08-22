@@ -16,4 +16,8 @@ public class MessageService{
         return messageRepository.findAllByEventId(id);
     }
 
+    public Message saveMessage(Message m){
+        return messageRepository.save(m);
+    }
+
 }

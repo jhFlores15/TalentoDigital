@@ -2,8 +2,10 @@ package com.johfloresm.eventos.controllers;
 
 import com.johfloresm.eventos.models.Event;
 import com.johfloresm.eventos.models.Location;
+import com.johfloresm.eventos.models.Message;
 import com.johfloresm.eventos.models.User;
 import com.johfloresm.eventos.services.EventService;
+import com.johfloresm.eventos.services.MessageService;
 import com.johfloresm.eventos.services.StateService;
 import com.johfloresm.eventos.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,8 @@ public class EventController{
     UserService  userService;
     @Autowired
     StateService stateService;
+    @Autowired
+    MessageService messageService;
 
 
 
@@ -63,6 +67,7 @@ public class EventController{
         if(httpSession.getAttribute("idUser") == null){ return "redirect:/";}
         Event e = eventService.getEventById(id);
         model.addAttribute("event" , e);
+        model.addAttribute("messages" , messageService.getMessagesByEventId(e.getId()));
         model.addAttribute("users" , e.getUsers());
         return "events/show.jsp";
     }
@@ -119,5 +124,15 @@ public class EventController{
 
         userService.saveUser(user);
         return "redirect:/events";
+    }
+    @PostMapping("/{id}/addMessage")
+    public String addMessage(@PathVariable("id") Long id,@RequestParam("message") String message,HttpSession httpSession){
+        if(httpSession.getAttribute("idUser") == null){ return "redirect:/";}
+        User user = userService.findUserById(Long.parseLong(httpSession.getAttribute("idUser").toString()));
+        Event e = eventService.getEventById(id);
+        Message m= new Message(user,e,message);
+        messageService.saveMessage(m);
+
+        return "redirect:/events/"+e.getId();
     }
 }

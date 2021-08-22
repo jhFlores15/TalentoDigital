@@ -14,7 +14,7 @@ public class Event{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long        id;
     @NotEmpty(message = "nombre requerido")
-    private String      name;
+    private String name;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date        date;
     @ManyToOne(fetch = FetchType.LAZY)

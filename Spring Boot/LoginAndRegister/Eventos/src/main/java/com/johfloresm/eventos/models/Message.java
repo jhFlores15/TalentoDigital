@@ -31,6 +31,14 @@ public class Message{
         this.createdAt = new Date();
     }
 
+    public Message(){}
+
+    public Message(User user, Event event, String message){
+        this.user = user;
+        this.event = event;
+        this.message = message;
+    }
+
     public Long getId(){
         return id;
     }
