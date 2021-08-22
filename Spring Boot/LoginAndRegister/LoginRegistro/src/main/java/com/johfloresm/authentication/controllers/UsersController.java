@@ -35,7 +35,7 @@ public class UsersController{
             return "index.jsp";
         }
         user = userService.registerUser(user);
-        session.setAttribute("idUsuario", user.getId());
+        session.setAttribute("idUser", user.getId());
         return "redirect:/home";
     }
 
@@ -43,7 +43,7 @@ public class UsersController{
     public String loginUser(@RequestParam("email") String email, @RequestParam("password") String password, Model model, HttpSession session) {
         if(userService.authenticateUser(email,password)){
             User user = userService.findByEmail(email);
-            session.setAttribute("idUsuario", user.getId());
+            session.setAttribute("idUser", user.getId());
             return "redirect:/home";
         }
         return "index.jsp";
@@ -51,8 +51,8 @@ public class UsersController{
 
     @RequestMapping("/home")
     public String home(HttpSession session, Model model) {
-        if(session.getAttribute("idUsuario") != null){
-            User usuario = userService.findUserById(Long.parseLong(session.getAttribute("idUsuario").toString()));
+        if(session.getAttribute("idUser") != null){
+            User usuario = userService.findUserById(Long.parseLong(session.getAttribute("idUser").toString()));
             model.addAttribute("user",usuario);
             return "home.jsp";
         }
@@ -64,5 +64,8 @@ public class UsersController{
         session.invalidate();
         return "redirect:/";
     }
+
+    //if(httpSession.getAttribute("idUser") == null){ return "redirect:/";}
+    //User user = userService.findUserById(Long.parseLong(httpSession.getAttribute("idUser").toString()));
 
 }

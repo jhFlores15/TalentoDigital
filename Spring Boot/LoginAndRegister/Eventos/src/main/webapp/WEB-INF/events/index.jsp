@@ -22,7 +22,13 @@
 <%--@elvariable id="user" type="com.johfloresm.eventos.models.User"--%>
 
     <div class="container">
-        <h3>Welcome, <c:out value="${user.firstName}  ${user.lastName}"/></h3>
+        <div class="row">
+            <div class="col"><h3>Welcome, <c:out value="${user.firstName}  ${user.lastName}"/></h3></div>
+            <div class="col justify-content-end">
+                <a class="align-content-end" href="/logout">Logout</a>
+            </div>
+        </div>
+
         <div class="row mb-5 w-80">
             <h6>Here are some of the events in your state</h6>
             <table id="dtTable" class="display">
