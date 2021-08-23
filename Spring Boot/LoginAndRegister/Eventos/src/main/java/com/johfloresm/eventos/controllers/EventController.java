@@ -101,7 +101,7 @@ public class EventController{
         }
 
         eventService.saveEvent(e);
-        return "events/"+event.getName();
+        return "redirect:/events/"+event.getName();
     }
 
     @GetMapping("/{id}/join")

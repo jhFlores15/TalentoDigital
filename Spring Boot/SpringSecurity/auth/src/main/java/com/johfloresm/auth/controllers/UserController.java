@@ -69,7 +69,7 @@ public class UserController {
             return "redirect:/admin";
         }
         model.addAttribute("currentUser", userService.findByUsername(username));
-        return "homePage.jsp";
+        return "home.jsp";
     }
 
     @RequestMapping("/admin")
