@@ -1,3 +1,7 @@
 $(document).ready( function () {
-    $('#dt').DataTable();
+    $('#dt').DataTable(
+        {
+            "order": []
+        }
+    );
 } );
