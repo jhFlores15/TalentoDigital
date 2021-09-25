@@ -29,14 +29,6 @@ public class Film{
     )
     private List<Category> categories;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="language_id")
-    private Language       language;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="original_language_id")
-    private Language original_language;
-
     public Long getFilm_id(){
         return film_id;
     }
@@ -131,22 +123,6 @@ public class Film{
 
     public void setCategories(List<Category> categories){
         this.categories = categories;
-    }
-
-    public Language getLanguage(){
-        return language;
-    }
-
-    public void setLanguage(Language language){
-        this.language = language;
-    }
-
-    public Language getOriginal_language(){
-        return original_language;
-    }
-
-    public void setOriginal_language(Language original_language){
-        this.original_language = original_language;
     }
 
     @PreUpdate

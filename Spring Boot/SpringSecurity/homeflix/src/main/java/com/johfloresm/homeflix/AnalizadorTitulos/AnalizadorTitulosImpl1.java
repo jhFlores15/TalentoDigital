@@ -7,6 +7,7 @@ public class AnalizadorTitulosImpl1 implements AnalizadorTitulos{
         String [] words = title.split(" ");
         int result = 0;
         switch(words.length){
+            case 0:
             case 1:
                 result = -1;
                 break;

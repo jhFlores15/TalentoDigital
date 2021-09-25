@@ -1,5 +1,7 @@
 package com.johfloresm.homeflix.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -12,6 +14,7 @@ public class Category{
     private Long category_id;
     String name;
     private Date           last_update;
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "film_category",

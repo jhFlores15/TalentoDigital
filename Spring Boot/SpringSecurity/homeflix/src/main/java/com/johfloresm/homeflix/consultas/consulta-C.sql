@@ -7,3 +7,4 @@ from film as f
 where c.name = 'Horror'
   and a.first_name = 'Susan'
   and a.last_name = 'Davis'
+order by title asc
